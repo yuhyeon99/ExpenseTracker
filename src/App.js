@@ -1,20 +1,18 @@
 import React, {useState, useEffect} from "react";
-import { atom } from 'recoil';
+import { atom, useRecoilValue } from 'recoil';
 
-import './App.css';
+
 import TrackerContainer from './components/Tracker/TrackerContainer';
-import ItemAtom from './recoil/ItemAtoms';
+import {ItemAtom, updateLocalStorage} from './recoil/ItemAtom';
 
 function App() {
 
-  const item = useRecoilValue(ItemAtom);
-
-  useEffect(()=>{
-
-  }, []);
+  useEffect(() => {
+    updateLocalStorage(ItemAtom);
+  }, [ItemAtom]);
 
   return (
-    <TrackerContainer items={item} />
+    <TrackerContainer />
   );
 }
 
