@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { atom } from 'recoil';
 
 import './App.css';
-import TrackerContainer from './components/TrackerContainer';
+import TrackerContainer from './components/Tracker/TrackerContainer';
 import ItemAtom from './recoil/ItemAtoms';
 
 function App() {
