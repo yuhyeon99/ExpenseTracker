@@ -1,0 +1,9 @@
+.tracker-list{ margin-top:20px; padding:20px 0; width:100%; }
+.tracker-list > .list-type{ width:100%; display:flex; grid-gap:10px; border-bottom:solid 2px #e1e3e5; padding-bottom:10px; }
+.tracker-list > .list-type > p{ font-size:18px; font-weight:bold; color:#aeaeae;  }
+.tracker-list > .list-type > p.active{ color:#333; }
+
+.tracker-list > .list-items{ border:dashed 2px #267ca2; background:#edeeef; border-radius:10px; overflow:hidden; margin-top:30px; padding:20px 0; cursor:pointer; }
+.tracker-list > .list-items > div{ width:100%; display:flex; flex-direction:column; align-items:center; grid-gap:10px; }
+.tracker-list > .list-items img{ width:50px; }
+.tracker-list > .list-items p{ font-weight:bold; color:#267ca2; }
