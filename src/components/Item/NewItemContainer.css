@@ -1,0 +1,2 @@
+.new-item-container{ width:100%; }
+.new-item-container > .border-block{ position: absolute; padding: 5px 0; left: 0; background: #e0e1e4; width:100%; }
