@@ -1,2 +1,16 @@
-.new-item-container{ width:100%; }
+.new-item-container{ width:100%; padding:20px 0; display:flex; flex-wrap:wrap; }
+.new-item-container > div{ width:100%; display:flex; flex-wrap:wrap; }
 .new-item-container > .border-block{ position: absolute; padding: 5px 0; left: 0; background: #e0e1e4; width:100%; }
+.new-item-container > .block-title{ margin-top:20px; }
+.new-item-container > .block-title > p{ width:100%; font-size:20px; font-weight:bold; padding:10px 0; border-bottom:solid 1px #e1e3e5; }
+
+.new-item-form > div { width:100%; display:flex; grid-gap:5px; }
+.new-item-form > div > p{ padding-top:15px; font-size:18px; font-weight:bold; }
+.new-item-form > div > input{ border:solid 1px #e1e3e5; padding:18px; border-radius:10px; background:#edeeef; color:#7f7f80; font-size:18px; font-weight:bold; margin-top:10px; }
+
+.new-item-form > .form-date > input{ width:calc(100%/3); text-align: center; }
+.new-item-form > .form-inout > input{ width:calc(100%/2); background:#fff; }
+.new-item-form > .form-text > input{ width:calc(100%/1); }
+.new-item-form > .form-price > input{ width:calc(100%/1); }
+.new-item-form > .form-button-submit > input{ width:calc(100%/1); margin-top:30px; background:#0d6e98; color:#fff; }
+.new-item-form > .form-button-close > input{ width:calc(100%/1); }

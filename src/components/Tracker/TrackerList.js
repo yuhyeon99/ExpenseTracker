@@ -17,6 +17,7 @@ const TrackerList = () => {
                     <p>새 거래 내역을 추가하세요</p>
                 </div>
             </div>
+            
         </div>
     );
 }
