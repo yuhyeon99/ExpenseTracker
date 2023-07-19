@@ -10,6 +10,7 @@
 
 .new-item-form > .form-date > input{ width:calc(100%/3); text-align: center; }
 .new-item-form > .form-inout > input{ width:calc(100%/2); background:#fff; }
+.new-item-form > .form-inout > input.active{ background:#0d6e98; color:#fff; }
 .new-item-form > .form-text > input{ width:calc(100%/1); }
 .new-item-form > .form-price > input{ width:calc(100%/1); }
 .new-item-form > .form-button-submit > input{ width:calc(100%/1); margin-top:30px; background:#0d6e98; color:#fff; }
