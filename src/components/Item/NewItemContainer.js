@@ -4,6 +4,7 @@ import { useSetRecoilState } from 'recoil';
 import { ItemAtom } from '../../recoil/ItemAtom';
 
 const NewItemContainer = () => {
+
     const setItems = useSetRecoilState(ItemAtom);
     const [newItem, setNewItem] = useState({
         year: '',
@@ -27,7 +28,7 @@ const NewItemContainer = () => {
         setItems((prevItems) => [...prevItems, newItem]);
 
         // localStorage에 추가해주는 코드
-        const storedItems = JSON.parse(localStorage.getItem('ItemAtom'));
+        const storedItems = JSON.parse(localStorage.getItem('ItemAtom')) || [];
         const updateItems = [...storedItems, newItem];
         localStorage.setItem('ItemAtom', JSON.stringify(updateItems));
 
@@ -81,7 +82,7 @@ const NewItemContainer = () => {
                     <input type="text" name="amount" value={newItem.amount} onChange={handleInputChange} placeHolder="금액을 입력하세요(예: 12000)" />
                 </div>
                 <div className="form-button-submit">
-                    <input type="button" value="입력하기" />
+                    <input type="button" value="입력하기" onClick={handleAddItem} />
                 </div>
                 <div className="form-button-close">
                     <input type="button" value="닫기" />

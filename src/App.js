@@ -7,9 +7,11 @@ import {ItemAtom, updateLocalStorage} from './recoil/ItemAtom';
 
 function App() {
 
+  const newItem = useRecoilValue(ItemAtom);
+  
   useEffect(() => {
-    updateLocalStorage(ItemAtom);
-  }, [ItemAtom]);
+    updateLocalStorage(newItem);
+  }, [newItem]);
 
   return (
     <TrackerContainer />
