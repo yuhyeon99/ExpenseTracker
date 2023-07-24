@@ -1,2 +1,5 @@
-.ItemList{ width:100%; border:solid 1px red; margin-top:20px; display:flex; }
-.ItemList > .item{ width:100%; display:flex; padding:15px; justify-content:space-between; }
+.ItemList{ width:100%; margin-top:20px; display:flex; flex-wrap:wrap; grid-gap:5px; }
+.ItemList > .item{ background:#fff; width:100%; display:flex; padding:15px; justify-content:space-between; border-radius:10px; border:solid 1px #dbdbdb; font-weight:bold; align-items:center; width:100%; }
+.ItemList > .item .info-date{ color:#aeaeae; font-size:14px;  }
+.ItemList > .item .info-title{ font-size:18px; }
+.ItemList > .item .money-plus{ color:#1fa556; font-size:20px; font-weight:normal; }
