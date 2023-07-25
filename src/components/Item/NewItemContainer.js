@@ -1,11 +1,14 @@
 import React,{useState, useEffect} from 'react';
 import './NewItemContainer.css';
 import { useSetRecoilState } from 'recoil';
-import { ItemAtom } from '../../recoil/ItemAtom';
-
+import { ItemAtom } from '../../recoil/AtomList';
+import { NewItemAtom } from '../../recoil/AtomList';
+    
 const NewItemContainer = () => {
 
     const setItems = useSetRecoilState(ItemAtom);
+    const closeNewItemBtn = useSetRecoilState(NewItemAtom);
+
     const [newItem, setNewItem] = useState({
         year: '',
         month: '',
@@ -40,6 +43,7 @@ const NewItemContainer = () => {
             description : '',
             amount : '',
         });
+        closeNewItemBtn(false);
     }
 
     return(
@@ -85,7 +89,7 @@ const NewItemContainer = () => {
                     <input type="button" value="입력하기" onClick={handleAddItem} />
                 </div>
                 <div className="form-button-close">
-                    <input type="button" value="닫기" />
+                    <input type="button" value="닫기" onClick={()=>closeNewItemBtn(false)} />
                 </div>
             </div>
         </div>

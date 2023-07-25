@@ -13,7 +13,7 @@
 .tracker_status > .status_about{ margin-top:77px; display:flex; flex-direction:column; align-items:center; padding:40px 0 30px 0; }
 .tracker_status > .status_about img{ width:100px; padding-bottom:10px; }
 .tracker_status > .status_about > p{ padding:2px 0; font-size:17px; font-weight:600; }
-.tracker_status > .status_about .money{ padding:30px 0; font-size:35px; }
+.tracker_status > .status_about .money{ padding:30px 0; font-size:35px; color:#0d6e98; }
 .tracker_status > .status_about .about_box{ width:100%; padding:30px 0; border:solid 1px #dbdbdb; background:#fff; border-radius:10px; }
     .status_about .about_box ul{ display:flex; height:100%; justify-content:space-around; }
     .about_box ul > li{ width:49%; text-align: center;}

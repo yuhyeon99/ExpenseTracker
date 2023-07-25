@@ -3,7 +3,7 @@ import { atom, useRecoilValue } from 'recoil';
 
 
 import TrackerContainer from './components/Tracker/TrackerContainer';
-import {ItemAtom, updateLocalStorage} from './recoil/ItemAtom';
+import {ItemAtom, updateLocalStorage} from './recoil/AtomList';
 
 function App() {
 
