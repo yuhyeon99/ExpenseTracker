@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect, useRef } from 'react';
 import './NewItemContainer.css';
 import { useSetRecoilState } from 'recoil';
 import { ItemAtom } from '../../recoil/AtomList';
@@ -8,6 +8,10 @@ const NewItemContainer = () => {
 
     const setItems = useSetRecoilState(ItemAtom);
     const closeNewItemBtn = useSetRecoilState(NewItemAtom);
+
+    const yearInputRef = useRef(null);
+    const monthInputRef = useRef(null);
+    const dayInputRef = useRef(null);
 
     const MAX_DESCRIPTION_LENGTH = 20; // 최대 글자 수
 
@@ -51,6 +55,16 @@ const NewItemContainer = () => {
             ...prevItem,
             [name] : value,
         }));
+
+        // 년도 입력 시 월 인풋 창으로 포커스 이동
+        if (name === 'year' && value.length === 4) {
+            monthInputRef.current.focus();
+        }
+    
+        // 월 입력 시 일 인풋 창으로 포커스 이동
+        if (name === 'month' && value.length === 2) {
+            dayInputRef.current.focus();
+        }
     };
 
     const handleAddItem = () => {
@@ -116,9 +130,9 @@ const NewItemContainer = () => {
             <div className="new-item-form">
                 <div><p>날짜</p></div>
                 <div className="form-date">
-                    <input type="text" name="year" value={newItem.year} onChange={handleInputChange} placeHolder="년(ex:2023)" />
-                    <input type="text" name="month" value={newItem.month} onChange={handleInputChange} placeHolder="월(ex:03)" />
-                    <input type="text" name="day" value={newItem.day} onChange={handleInputChange} placeHolder="일(ex:01)" />
+                    <input ref={yearInputRef} type="text" name="year" value={newItem.year} onChange={handleInputChange} placeHolder="년(ex:2023)" />
+                    <input ref={monthInputRef} type="text" name="month" value={newItem.month} onChange={handleInputChange} placeHolder="월(ex:03)" />
+                    <input ref={dayInputRef} type="text" name="day" value={newItem.day} onChange={handleInputChange} placeHolder="일(ex:01)" />
                 </div>
                 <div>
                     <p>내용</p>
