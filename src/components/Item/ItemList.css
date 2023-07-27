@@ -1,5 +1,80 @@
-.ItemList{ width:100%; margin-top:20px; display:flex; flex-wrap:wrap; grid-gap:5px; }
-.ItemList > .item{ background:#fff; width:100%; display:flex; padding:15px; justify-content:space-between; border-radius:10px; border:solid 1px #dbdbdb; font-weight:bold; align-items:center; width:100%; }
-.ItemList > .item .info-date{ color:#aeaeae; font-size:14px;  }
-.ItemList > .item .info-title{ font-size:18px; }
-.ItemList > .item .money-plus{ color:#1fa556; font-size:20px; font-weight:normal; }
+.ItemList {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 5px;
+  }
+  
+  .ItemList > .item {
+    background: #fff;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: solid 1px #dbdbdb;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transition: transform 0.2s ease-out; /* 부드러운 효과를 위한 트랜지션 추가 */
+  }
+  
+  .ItemList > .item.hovered {
+    transform: translateX(-10px); /* 원하는 이동량에 맞게 값 조정 */
+  }
+  
+  .ItemList > .item .info-date {
+    color: #aeaeae;
+    font-size: 14px;
+  }
+  
+  .ItemList > .item .info-title {
+    font-size: 18px;
+  }
+  
+  .ItemList > .item .money-plus {
+    color: #1fa556;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  .ItemList > .item .money-minus {
+    color: #d94a3b;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  .ItemList .showAllBtn {
+    width: calc(100% / 1);
+    margin-top: 5px;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #0d6e98;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    /* top: 50%; */
+    right: 0;
+    /* transform: translateY(-50%); */
+    background-color: #ff7675;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 20px;
+    height:100%;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* 처음에는 숨겨진 상태로 설정 */
+    transition: opacity 0.2s ease-out; /* 페이드 인/아웃 효과를 위한 트랜지션 추가 */
+  }
+  
+  .ItemList > .item.hovered .delete-btn {
+    opacity: 1; /* 아이템에 마우스를 올렸을 때 삭제 버튼 표시 */
+  }

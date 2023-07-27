@@ -8,6 +8,7 @@
 .new-item-form > div > p{ padding-top:15px; font-size:18px; font-weight:bold; }
 .new-item-form > div > input{ border:solid 1px #e1e3e5; padding:18px; border-radius:10px; background:#edeeef; color:#7f7f80; font-size:18px; font-weight:bold; margin-top:10px; }
 
+.new-item-form .character-count{ justify-content:flex-end; }
 .new-item-form > .form-date > input{ width:calc(100%/3); text-align: center; }
 .new-item-form > .form-inout > input{ width:calc(100%/2); background:#fff; }
 .new-item-form > .form-inout > input.active{ background:#0d6e98; color:#fff; }
