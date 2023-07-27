@@ -42,7 +42,7 @@ const TrackerStatus = () => {
                     {(amount_total > 0) ? (
                        <span style={{ color: "#0d6e98" }}>&#8361; {amount_total.toLocaleString()}</span>
                     ) : amount_total < 0 ? (
-                       <span style={{ color: "#d94a3b" }}>&#8361; {Math.abs(amount_total).toLocaleString()}</span>
+                       <span style={{ color: "#d94a3b" }}>&#8361; -{Math.abs(amount_total).toLocaleString()}</span>
                     ) : (
                         <span style={{ color: "#000" }}>&#8361; 0</span>
                     )}
