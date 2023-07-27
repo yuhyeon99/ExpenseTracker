@@ -138,7 +138,7 @@ const NewItemContainer = () => {
                     />
                 </div>
                 <div className="form-text">
-                    <input type="text" name="description" value={newItem.description} onChange={handleInputChange} placeHolder="내용을 입력하세요(예: 출근버스비) 20자 이내" />    
+                    <input type="text" name="description" value={newItem.description} onChange={handleInputChange} placeHolder="내용을 입력하세요(예: 출근버스비)" />    
                 </div>
                 <div className="character-count">
                     {getCurrentCharacterCount(newItem.description)} / {MAX_DESCRIPTION_LENGTH}
