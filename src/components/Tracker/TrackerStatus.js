@@ -35,7 +35,7 @@ const TrackerStatus = () => {
             <div className="status_about">
                 <img src="/img/logo.png"/>
                 <p>안녕하세요!</p>
-                <p>이번 달 거래 내역을</p>
+                <p>월별 거래 내역을</p>
                 <p>확인해보세요.</p>
                 <p className="money">
                     
