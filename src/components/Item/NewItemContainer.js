@@ -116,9 +116,9 @@ const NewItemContainer = () => {
             <div className="new-item-form">
                 <div><p>날짜</p></div>
                 <div className="form-date">
-                    <input type="text" name="year" value={newItem.year} onChange={handleInputChange} placeHolder="yyyy" />
-                    <input type="text" name="month" value={newItem.month} onChange={handleInputChange} placeHolder="mm" />
-                    <input type="text" name="day" value={newItem.day} onChange={handleInputChange} placeHolder="dd" />
+                    <input type="text" name="year" value={newItem.year} onChange={handleInputChange} placeHolder="년(ex:2023)" />
+                    <input type="text" name="month" value={newItem.month} onChange={handleInputChange} placeHolder="월(ex:03)" />
+                    <input type="text" name="day" value={newItem.day} onChange={handleInputChange} placeHolder="일(ex:01)" />
                 </div>
                 <div>
                     <p>내용</p>
