@@ -48,7 +48,6 @@ const ItemList = ({listShowType}) => {
     // 더보기 구현
     const [showAll, setShowAll] = useState(false);
     const showItemCount = showAll ? filteredByType.length : 5;
-
     const handleShowAll = () => {
         setShowAll(true);
     };
