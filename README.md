@@ -1,70 +1,189 @@
-# Getting Started with Create React App
+# 김유현
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ExpenseTracker 프로젝트
+React와 Recoil을 활용하여 사용자가 금전 거래 내역을 기록하고 관리할 수 있는 ExpenseTracker 프로젝트입니다. 날짜별로 수입과 지출을 추가하고 필터링하여 조회할 수 있는 기능을 제공합니다.
 
-## Available Scripts
+> 사이트 링크 : [ExpenseTracker](expense-tracker-rose-ten.vercel.app)
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## 개발자의 GitHub 주소
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<table>
+  <tr> 
+    <td align="center"><a href="https://github.com/yuhyeon99"><img src="https://avatars.githubusercontent.com/u/83055700?s=96&v=4" width="100px;" alt=""/><br /><sub><b>김유현</b></sub></a><br /><a href="https://github.com/yuhyeon99" title="Code">🏠</a>
+    </td>
+  </tr>
+</table>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> "어제 자신을 넘어 더욱 성장을 추구하는 개발자 김유현이라고 합니다."
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 🔍 목차
 
-### `npm run build`
+> 1. GitHub 관리 전략
+> 2. 프로젝트
+>    1. 개요
+>    2. 개념
+>    3. 기능
+>    4. 신중하게 생각한 부분
+>       - UI/UX
+>       - 프로젝트 구상
+> 3. 개발 환경
+>    1. 프레임워크
+>    2. 데이터베이스
+> 4. 힘들었던 일
+> 5. 사용 기술
+> 6. 자기 평가
+> 7.  조언하고 싶은 포인트
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 1. GitHub 관리 전략
 
-### `npm run eject`
+## 1.1. :pushpin: Commit Convention
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+|   [Type]    |             설명              |                       예                       |
+| :---------: | :---------------------------: | :--------------------------------------------: |
+|     feat     |  기능 추가 :heavy_plus_sign:   |           "feat : 거래 내역 추가 기능 구현"           |
+|     fix     |        버그 수정 :bug:         | "fix : 거래 내역 삭제 오류 수정" |
+|   modify    |  코드 타이포 수정 :zap:   |      "modify : UI 스타일 조정"      |
+|  refactor   |  코드 구조 변경 :pencil2:   |   "refactor : 상태 관리 로직 개선"    |
+| enhancement | UI 디자인 변경  (CSS) :art: |      "enhancement : 거래 내역 스타일 개선"      |
+| Deployment  |                               |                                                |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 1.2. Git Branch 관리
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+main -- develop -- feature/#1
+                \_ feature/#2
+```
 
-## Learn More
+* `main` : 배포되는 기본 버전
+* `develop` : 개발 브랜치
+* 기능 개발 브랜치는 develop 브랜치에서 생성되어 개발을 진행합니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+# 2. 프로젝트
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 2.1. 개요
 
-### Analyzing the Bundle Size
+- 프로젝트 이름: ExpenseTracker
+- 의미: 사용자가 금전 거래 내역을 기록하고 관리할 수 있도록 돕는 애플리케이션입니다. 날짜별 수입과 지출을 기록하며, 필터를 통해 월별 거래 내역을 손쉽게 확인할 수 있습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## 2.2. 개념
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ExpenseTracker는 사용자가 손쉽게 거래 내역을 추가하고 관리할 수 있도록 설계된 프로젝트입니다. 
 
-### Advanced Configuration
+### 특징
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. 사용자가 날짜, 거래 타입(수입/지출), 내용, 금액을 입력하여 거래를 기록할 수 있습니다.
+2. 거래 내역은 LocalStorage를 사용하여 지속적으로 저장됩니다.
+3. 월별로 거래 내역을 필터링하여 확인할 수 있습니다.
+4. Recoil을 활용하여 전역 상태 관리를 구현하여 모든 컴포넌트에서 쉽게 접근 및 조작할 수 있습니다.
+5. 사용자가 입력하는 동안 즉각적으로 유효성 검사를 수행하여 올바른 값만 저장됩니다.
+6. 저장된 거래 내역은 내림차순으로 정렬되며, 필요시 더보기 버튼으로 모든 내역을 확인할 수 있습니다.
+7. 거래 내역을 쉽게 삭제할 수 있도록 마우스 오버 시 삭제 버튼을 표시합니다.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br>
 
-### `npm run build` fails to minify
+## 2.3. 기능
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. 거래 내역 기록 기능 (CRUD)
+   - 날짜, 거래 유형, 내용, 금액을 입력하여 새로운 거래 내역 추가.
+   - 로컬스토리지에 거래 내역을 저장하여 지속적인 데이터 관리.
+   - 기록된 내역을 삭제하거나 수정 가능.
+
+2. 거래 내역 필터 기능
+   - 월별로 거래 내역을 필터링하여 조회할 수 있음.
+
+3. 거래 내역 정렬 및 표시
+   - 최근 날짜 순으로 정렬하여 최신 거래를 먼저 표시.
+   - 필터링된 내역을 더보기 버튼을 통해 추가로 확인 가능.
+
+4. 직관적인 UI/UX 설계
+   - 거래 내역을 입력할 때 유효성 검사를 통해 잘못된 값 입력 방지.
+   - 선택된 월의 거래 내역을 깔끔하게 보여주도록 설계.
+   - 마우스 오버 시 삭제 버튼이 표시되어 직관적인 삭제 기능 제공.
+
+
+<br>
+
+## 2.4. 신중하게 생각한 부분 (UI/UX)
+
+1. 입력 폼 유효성 검사
+   - 잘못된 값 입력 방지를 위해 날짜, 거래 타입, 내용, 금액의 유효성을 검사합니다.
+   - 사용자가 즉각적인 피드백을 받을 수 있도록 구현했습니다.
+
+2. 필터링 및 정렬 기능
+   - 사용자가 원하는 데이터를 빠르고 쉽게 조회할 수 있도록 필터링 기능과 정렬 기능을 고려하여 설계하였습니다.
+
+3. UI 디자인의 단순화
+   - 사용자가 거래 내역을 쉽게 추가하고 조회할 수 있도록 간결한 디자인으로 구성하였습니다.
+   - 입력 폼과 목록을 직관적으로 구분하고 버튼 스타일을 개선하였습니다.
+
+4. 코드 구조화
+   - Recoil을 사용하여 상태 관리를 효율적으로 구현하였으며, 코드의 가독성을 높이기 위해 모듈화를 진행했습니다.
+
+
+<br>
+
+# 3. 개발 환경
+
+## 3.1. 프레임워크
+
+1. Front
+   - React.js  18.2.0
+   - Recoil 0.7.7
+   - react-datepicker 4.16.0 (날짜 선택 기능)
+
+
+## 3.2. 데이터베이스
+
+1. LocalStorage (브라우저 저장소 활용)
+
+
+## 3.3. 개발 도구 및 환경
+
+- OS: Windows
+- IDE: Visual Studio Code
+
+<br>
+
+# 4. 힘들었던 일
+
+1. 로컬스토리지를 이용한 상태 관리에서 데이터 삭제 후 상태 갱신 문제.
+2. 날짜 필터링 로직에서 특정 월을 선택할 때 데이터가 제대로 표시되지 않는 오류 발생.
+
+### 해결 방법
+
+1. Recoil의 상태와 LocalStorage를 동기화하는 함수 작성하여 문제 해결.
+2. 날짜 객체 비교 방식을 수정하여 필터링 오류 해결.
+
+<br>
+
+# 5. 사용 기술（Skill）
+
+`HTML5` `CSS3` `Javascript` `React.js` `Recoil` `react-datepicker`
+
+<br>
+
+# 6. 자기 평가
+
+이번 프로젝트를 통해 Recoil을 이용한 상태 관리의 편리함과 어려움을 모두 경험할 수 있었습니다. 
+기록 및 필터 기능은 잘 구현되었지만, UI 스타일 개선 및 코드 구조화를 좀 더 고민해봐야 할 필요성을 느꼈습니다.
+
+<br>
+
+# 7. 조언하고 싶은 포인트
+
+코드 구조화 방식이나 상태 관리 로직에 대해 개선할 부분이 있는지, 더 효율적인 접근 방법이 있는지 피드백을 주시면 감사하겠습니다.
+
